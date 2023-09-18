@@ -1,0 +1,40 @@
+setup java and tomcat on linux machine
+
+Step-1 Download tomcat and java and extract in /opt/ the edit below two file 
+
+
+vi ~/.bashrc 
+
+# .bashrc
+
+# User specific aliases and functions
+
+
+#export JAVA_HOME=/opt/jdk1.8.0_202
+#export JAVA_HOME=/opt/jdk-11.0.18/bin
+export JAVA_HOME=/opt/jdk-17.0.8
+export CATALINA_HOME=/opt/apache-tomcat-10.1.13
+export PATH="$JAVA_HOME/bin:$PATH"
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
+
+vi ~/.bash_profile
+
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+        . ~/.bashrc
+fi
+
+# User specific environment and startup programs
+export CATALINA_HOME=/opt/apache-tomcat-10.1.13
+PATH=$PATH:$HOME/bin
+~            
